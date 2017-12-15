@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!-- Trevor Colby -->
+<!-- 11/22/2017 --
+<!-- HTML designed to create page to practice scrolling with -->
+
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" charset="utf-8" />	
+	<link rel="stylesheet" href=styleSheet2.css>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body id="body">
+	<style>="position:absolute" </style>
+	<!-- <canvas id="canvas"></canvas> -->
+	<!-- <canvas id="canvas2"></canvas> -->
+
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- Div for page class -->
+<!-- ************************************* -->
+
+<div class="page">
+<header>
+   <h1>Page Navigation Demo: Jump to ID</h1>
+</header>
+
+
+<!-- <nav> -->
+<!--   <ul> -->
+<!--     <li><a href="javascript:focusScrollLondon();">London</a></li> -->
+<!--     <li><a href="javascript:focusScrollParis();">Paris</a></li> -->
+<!--     <li><a href="javascript:focusScrollTokyo();">Tokyo</a></li> -->
+<!--     <li><a href="javascript:focusScrollBottom();">Rock Bottom</a></li> -->
+<!--   </ul> -->
+<!-- </nav> -->
+
+<article>
+  <h1>Three Cities</h1>
+  <p>This page is a demonstration of how a guided page tour could be integrated into a Opti Pod Format.</p>
+  <p>This is just a proof of concept and does not represent pod compatability. This is the simple scrolling version, future versions will integrated selective highlightening and designated ghosting protocols.</p>
+</article>
+
+<footer></footer>
+</div>
+
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- Div for containerLond class -->
+<!-- ************************************* -->
+
+<div class="containerLond" id="London">
+
+<!-- <nav> -->
+<!--   <ul> -->
+<!--     <li><a href="javascript:focusScrollParis();">Paris</a></li> -->
+<!--     <li><a href="javascript:focusScrollTokyo();">Tokyo</a></li> -->
+<!--     <li><a href="javascript:focusScrollBottom();">Rock Bottom</a></li> -->
+<!--   </ul> -->
+<!-- </nav> -->
+
+<article id="LondonArticle">
+  <h1>London</h1>
+  <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+</article>
+
+<footer></footer>
+
+</div>
+
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- Div for containerParis class -->
+<!-- ************************************* -->
+
+<div class="containerParis" id="Paris">
+
+<!-- <nav> -->
+<!--   <ul> -->
+<!--     <li><a href="javascript:focusScrollLondon();">London</a></li> -->
+<!--     <li><a href="javascript:focusScrollTokyo();">Tokyo</a></li> -->
+<!--     <li><a href="javascript:focusScrollBottom();">Rock Bottom</a></li> -->
+<!--   </ul> -->
+<!-- </nav> -->
+
+<article id= "ParisArticle">
+  <h1>Paris</h1>
+  <p>Paris is the capital city of France. It is a historic center of art and inovation in Europe with 2.24 million inhabitants.</p>
+  <p>Paris is located in the north-bending arc of the river Seine. Paris was founded around the end of the 3rd century BC by the Gauls who were called Parisii. In 52 BC Julius Caesar's legions conquered the territory, founding the Roman city, Lutetia on the earlier settlement. </p>
+</article>
+<footer></footer>
+
+</div>
+
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- Div for containerTokyo class -->
+<!-- ************************************* -->
+
+<div class="containerTokyo" id="Tokyo">
+<!-- <nav> -->
+<!--   <ul> -->
+<!--     <li><a href="javascript:focusScrollLondon();">London</a></li> -->
+<!--     <li><a href="javascript:focusScrollParis();">Paris</a></li> -->
+<!--     <li><a href="javascript:focusScrollBottom();">Rock Bottom</a></li> -->
+<!--   </ul> -->
+<!-- </nav> -->
+
+<article id="TokyoArticle">
+  <h1>Tokyo</h1>
+  <p>Tokyo is the capital city of Japan. It is the largest city on the island and has a population of 9.273 million.</p>
+  <p>. History tells that on February 11th 660 BC the first emperor of Japan (Jinmu) founded the nation. </p>
+</article>
+<footer></footer>
+</div>
+
+<!-- Item To Be added to bottom -->
+
+<img src="Three_horizontal_stripes.svg.png" alt="Stripes" width=100%>
+
+<div class="bottomOfPage" id="bottom">
+
+<!-- <nav> -->
+<!--   <ul> -->
+<!--     <li><a href="javascript:focusScrollLondon();">London</a></li> -->
+<!--     <li><a href="javascript:focusScrollParis();">Paris</a></li> -->
+<!--     <li><a href="javascript:focusScrollTokyo();">Tokyo</a></li> -->
+<!--   </ul> -->
+<!-- </nav> -->
+<article>
+ <h1 id="Rock">Welcome To Rock Bottom</h1>
+ <p>Rock bottom is located just south of bikini bottom, home to some odd language variants that are nearly impossible for outsiders to understand.</p>
+</article>
+
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="guidedTour.js"></script>
+</body>
+</html>
+
