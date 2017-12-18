@@ -40,7 +40,7 @@ var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, 
 
 //function to create/adjust four div elements
 //which create the spotlight effect
-export function darknessFalls(elem){
+function darknessFalls(elem){
 	var boundingRect = elem.getBoundingClientRect();
 	var pageWidth = document.body.scrollWidth;
 	//var pageHeight = document.body.scrollHeight;
@@ -118,3 +118,5 @@ export function darknessFalls(elem){
 		dynamicQuadrant4.parentNode.removeChild(dynamicQuadrant4);
 	});
 }
+
+export { darknessFalls }

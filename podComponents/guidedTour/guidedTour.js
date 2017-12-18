@@ -1,7 +1,7 @@
 //Trevor Colby
 //28 Nov, 2017
 //Experimenting with combining scrolling with page highlight and toggle selection with click on shadow.
-
+//this is the OUDATED TEMPLATE: USED ONLY FOR REFERENCE, NOT PART OF ABSTRACTION
 //Helper Functions
 //
 

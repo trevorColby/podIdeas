@@ -41,6 +41,8 @@
   <h1>Three Cities</h1>
   <p>This page is a demonstration of how a guided page tour could be integrated into a Opti Pod Format.</p>
   <p>This is just a proof of concept and does not represent pod compatability. This is the simple scrolling version, future versions will integrated selective highlightening and designated ghosting protocols.</p>
+  <link href="javascript:createTourGuide();"> click Here </link>
+  <input id="button" type="button" value="Launch Tour Guide">
 </article>
 
 <footer></footer>
@@ -136,8 +138,17 @@
 </article>
 
 </div>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script src="guidedTour.js"></script>
+<div id="output"></div>
+<!-- Load Babel -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- Your custom script here -->
+<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script> -->
+<script type="module" src="http://127.0.0.1:3000/destinationChoice.js"></script>
+<script type="module" src="http://127.0.0.1:3000/darknessFalls.js"></script>
+<script type="module" src="http://127.0.0.1:3000/scrollEngine.js"></script>
+<script type="module" src="http://127.0.0.1:3000/tourGuide.js"></script>
+
+
 </body>
 </html>
 
