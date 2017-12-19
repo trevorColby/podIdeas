@@ -40,18 +40,19 @@ var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, 
 
 //function to create/adjust four div elements
 //which create the spotlight effect
-function darknessFalls(elem){
+export function darknessFalls(elem){
+	
 	var boundingRect = elem.getBoundingClientRect();
 	var pageWidth = document.body.scrollWidth;
 	//var pageHeight = document.body.scrollHeight;
 	var pageHeight = getScreenSize();
+	var pixelWidth = toPixels(pageWidth);
+	var body = document.getElementById("body");
 
 //quadrant1: top strip
 	var dynamicQuadrant1 = document.createElement('div');
-	var body = document.getElementById("body");
-	document.body.appendChild(dynamicQuadrant1);
-	var pixelWidth = toPixels(pageWidth);
-	//dynamicQuadrant1.style.width=addPixels(pixelWidth,9);
+	body.appendChild(dynamicQuadrant1);
+	dynamicQuadrant1.id = "dQ1";
 	dynamicQuadrant1.style.width = toPixels(window.innerWidth);
 	dynamicQuadrant1.style.height=toPixels(boundingRect.top+window.scrollY);
 	dynamicQuadrant1.style.position = "absolute";
@@ -69,7 +70,7 @@ function darknessFalls(elem){
 //quadrant2 bottom strip
 	var dynamicQuadrant2 = document.createElement('div');
 	body.appendChild(dynamicQuadrant2);
-	//dynamicQuadrant2.style.width = addPixels(toPixels(pageWidth),9);
+	dynamicQuadrant2.id = "dQ2";
 	dynamicQuadrant2.style.width = toPixels(window.innerWidth);
 	dynamicQuadrant2.style.height = toPixels(pageHeight-boundingRect.bottom);
 	dynamicQuadrant2.style.pointerEvents = "auto";
@@ -87,6 +88,7 @@ function darknessFalls(elem){
 //quadrant3: left side strip
 	var dynamicQuadrant3 = document.createElement('div');
 	body.appendChild(dynamicQuadrant3);
+	dynamicQuadrant3.id="dQ3";
 	dynamicQuadrant3.style.width= toPixels(boundingRect.left);
 	dynamicQuadrant3.style.height = toPixels(boundingRect.bottom-boundingRect.top);
 	dynamicQuadrant3.style.pointerEvents = "auto";
@@ -104,6 +106,7 @@ function darknessFalls(elem){
 //quadrant4: right side strip
 	var dynamicQuadrant4 = document.createElement('div');
 	body.appendChild(dynamicQuadrant4);
+	dynamicQuadrant4.id = "dQ4";
 	dynamicQuadrant4.style.width = toPixels(window.innerWidth-boundingRect.right);
 	dynamicQuadrant4.style.height = toPixels(boundingRect.height);
 	dynamicQuadrant4.style.pointerEvents = "auto";
@@ -117,6 +120,7 @@ function darknessFalls(elem){
 		dynamicQuadrant3.parentNode.removeChild(dynamicQuadrant3);
 		dynamicQuadrant4.parentNode.removeChild(dynamicQuadrant4);
 	});
-}
+} 
 
-export { darknessFalls }
+
+//export { darknessFalls } //alternative way to export func (as obj with function in it) this is how you export multiple 
