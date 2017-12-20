@@ -12,9 +12,9 @@
 //business logic and animation of scrolling
 //takes target obj and duration of scrolling as parameters
 //returns nothing
-export function easingScrollAction(target,scrollDuration){
-	var elementPos = findPos(target);
-	var initialPos = window.pageYOffset; //page starting point
+export function easingScrollAction(target,scrollDuration){ //for intro.js adaptation will want to add padding so it doesn't scroll to top, add to  availspace calculation as well as destination calculation (place in function call)
+	var elementPos = findPos(target);  //for intro.js adaptation will leverage there find
+	var initialPos = window.pageYOffset; //page starting point 
 	var availableSpace = document.body.scrollHeight - elementPos; //dist from top of obj to bot of page
 	//point that is length of view window from bottom, used if
 	//initial destination is too close to bottom
@@ -25,12 +25,14 @@ export function easingScrollAction(target,scrollDuration){
 	var distance = yDestination - initialPos;
 	var startTime;
 
-	// Easing function: easeInOutCubic
-	// From: https://gist.github.com/gre/1650294
+	// Inspired by:  https://gist.github.com/gre/1650294
+	// modified mapping for smoother enter/exit with more satisfying approach
 	//Trevor Explanation: up until .5 eases in with 4t^3 cubic (inflection point at 0
 	//then eases off (slowing ROC) using  second cubic with inflection point at 1.
-	var easingFunc = function (t) { return (t<(0.5) ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1); };
+	//may want to alter more to slow/speed first half perhaps make into hybrid of quartic/cubic
+	var easingFunc = function (t) { return t<.5 ? 5*t*t*t : 2.42*(t+(-1.055))*(t+(-1.055))*(t+(-1.055))+1 }
 	
+
 	//animation: call before each frame
 	window.requestAnimationFrame(function nextFrame(timestamp) {
 		//check if start is undefined (first call)
@@ -57,7 +59,8 @@ export function easingScrollAction(target,scrollDuration){
 //Finds y value of given object
 //Input: object, suggested find using ID
 //	i.e) document.getElementById("");
-//Output: var number containing Y pos of element
+//Output: var number containing Y pos of element 
+//for intro.js compatability would leverage their find func
 
 function findPos(obj) {
     var curtop = 0;

@@ -66,7 +66,7 @@ function moveToPrev(Calvin){
 		currElement =0;
 		firstIteration =0;
 		letThereBeLight(currElement,Calvin);
-		//removeDarkness();
+		console.log("currElement: " + currElement);
 		alert("You're already at the first stop");
 	}
 }

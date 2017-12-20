@@ -63,37 +63,9 @@ export class tourGuide {
 	//1: top right
 	//2: bottom left
 	//3: bottom right
-	chooseLocation(){ //this needs some work
-		//should call everytime
-		//var pageWidth = document.body.scrollWidth;
-		//var pageHeight = window.innerWidth;
-		//var currentStop = document.getElementById(this.route[this.currStop]);
-		//console.log("Choose location: " + this.currStop);
-		//var guideHeight = this.height;
-		//var guideWidth = this.width;
-		//var boundingRect = currentStop.getBoundingClientRect();
-		//console.log("bounding rect top: " + boundingRect.top);
-		//console.log("Guide height: " + guideHeight);
-		//if(boundingRect.top>guideHeight){
-		//	//top left quadrant: default
-		//	return 0;
-		//}
-		//else if(boundingRect.top<guideHeight && boundingRect.right-pageWidth>guideWidth){
-		//	//top right quadrant
-		//	return 1;
-		//}
-		//else if(boundingRect.bottom-pageHeight>guideHeight){
-		//	//bottom left quadrant
-		//	return 2;
-		//}
-		//else if(boundingRect.bottom-pageHeight<guideHeight && boundingRect.right-pageWidth>guideWidth){
-		//	//bottom right quadrant
-		//	return 3;
-		//}
-		//else {
-		//	//other options failed, go to default
-		//	return 0; 
-		//}
+	chooseLocation(){ 
+		//switch to popover
+		//right now just choosing bottom left
 		return 2;
 	}
 	
@@ -336,3 +308,8 @@ function filicide(childID){
 	var innocentChild = document.getElementById(childID);
 	innocentChild.parentNode.removeChild(innocentChild);
 }
+
+
+//can use custom modal for table of contents
+//probably should make separate class
+//https://angular-ui.github.io/bootstrap/
